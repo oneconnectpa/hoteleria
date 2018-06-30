@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Your app title -->
+        <title>Hoteleria</title>
+        <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+        -->
+        <link rel="stylesheet" href="assets/lib/framework7/css/framework7.material.min.css">
+        <link rel="stylesheet" href="assets/lib/framework7/css/framework7.material.colors.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/swipebox.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body class="theme-red">
+        <!-- About Popup -->
+        <div class="popup login">
+            <div class="content-block">
+                <div class="login-screen-title lenguaje" key="title-login">...</div>
+                <center><p class="lenguaje" key="txt-info-login-1">...</p></center>
+                
+                <form action="#" method="post" id="login-form" >
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="fa fa-id-card fa-2x"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title floating-label"><span class="lenguaje" key="txt-input-login">...</span></div>
+                                        <div class="item-input">
+                                            <input type="number" name="id" id="id" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="buttons-row">
+                        <button type="submit" class="button button-big button-fill button-raised"> <i class="fa fa-sign-in"></i> <span class="lenguaje" key="btn-login-1">...</span></button>
+                        <a href="#" class="close-popup button-big button button-raised"><i class="fa fa-ban"></i> <span class="lenguaje" key="btn-login-2">...</span></a>
+                    </p>
+                </form>
+
+                <form action="#" method="post" id="auth-form">
+                    <p class="lenguaje" key="txt-info-login-3">... </p>
+                    <div class="list-block">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <select name="reservation-id" id="reservation-id">
+                                        <option value="">---</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="buttons-row">
+                        <button type="submit" class="button button-big button-fill button-raised"> <i class="fa fa-sign-in"></i> <span class="lenguaje" key="btn-login-3">...</span></button>
+                        <a href="#" class="close-popup button-big button button-raised"><i class="fa fa-ban"></i> <span class="lenguaje" key="btn-login-2">...</span></a>
+                    </p>
+                </form>
+
+                <p class="solicitar" style="text-align: right;"> 
+                    <a href="#" title=""> 
+                        <span class="lenguaje" key="txt-info-login-2">...</span>
+                    </a> 
+                </p>
+                <center>
+                <div class="row social">
+                    <div class="col-33"><a target="blank" class="external facebook" href="" title="facebook"><i class="fa fa-facebook-official fa-3x"></i></a></div>
+                    <div class="col-33"><a target="blank" class="external twitter" href="" title="twitter"><i class="fa fa-twitter-square fa-3x"></i></a></div>
+                    <div class="col-33"><a target="blank" class="external instagram" href="" title="instagram"><i class="fa fa-instagram fa-3x" ></i></a></div>
+                </div>
+                </center>
+            </div>
+        </div>
+        <!-- Panels Overlay -->
+        <div class="panel-overlay"></div>
+        <!-- Right panel, with cover effect -->
+        <div class="panel panel-right panel-cover">   
+            
+            <div class="user_login_info">
+                
+                <nav class="user-nav">
+                    <ul>
+                        <li><a href="my-reservations.html" class="close-panel"><span> <span class="lenguaje" key="menu-extra-1">...</span></span><strong id="number-total">{}</strong></a></li>
+                        <li><a href="my-data.html" class="close-panel"><span> <span class="lenguaje" key="menu-extra-2">...</span></span></a></li>
+                        <li><a href="#" class="ac-1 close-panel"><span> <span class="lenguaje" key="menu-extra-3">...</span></span></a></li>
+                        <li class="cerrar"><a href="#" class="close-session close-panel"><span> <span class="lenguaje" key="menu-extra-4">...</span></span></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <!-- Views -->
+        <div class="views">
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main">
+                <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+                <div class="pages">
+                    <!-- Page, "data-page" contains page name -->
+                    <div data-page="index" class="page">
+                        
+                        <!-- Top Navbar. In Material theme it should be inside of the page-->
+                        <div class="navbar nav-trans">
+                            <div class="navbar-inner">
+                                <div class="left">
+                                    <a href="#" class="link icon-only">
+                                        <i class="fa fa-home"></i>
+                                    </a>
+                                </div>
+                                <div class="center lenguaje" key="title">...</div>
+                                <div class="right">
+                                    <a href="#" data-panel="right" class="open-panel link icon-only">
+                                        <i class="icon icon-bars"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Scrollable page content -->
+                        <div class="page-content">
+                            <!-- swiper-init to initialize swiper automatically -->
+                            <div class="swiper-custom">
+                                <div class="swiper-container">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="assets/img/slider/slide01.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="assets/img/slider/slide02.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="assets/img/slider/slide03.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="no-login">
+                                
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="#" data-popup=".login" class="open-popup recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-user fa-4x"></i>
+                                            <p class="lenguaje" key="menu-1">...</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="reservas.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-calendar fa-4x"></i>
+                                            <p class="lenguaje" key="menu-2">...</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="evento.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-clock-o fa-4x"></i>
+                                            <p class="lenguaje" key="menu-3">...</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="promotions.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-bullhorn fa-4x"></i>
+                                            <p class="lenguaje" key="menu-4">...</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="services.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-bed fa-4x"></i>
+                                            <p class="lenguaje" key="menu-5">...</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="gallery.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-picture-o fa-4x"></i>
+                                            <p class="lenguaje" key="menu-6">...</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a target="blank" href="#" class="external phone-call recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-volume-control-phone fa-4x"></i>
+                                            <p class="lenguaje" key="menu-7">...</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-briefcase fa-4x"></i>
+                                            <p class="lenguaje" key="menu-8">...</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="true-login">
+                                
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="login/home.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-home fa-4x"></i>
+                                            <p>INICIO</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="login/mi-cuenta.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-user-circle fa-4x"></i>
+                                            <p>MI CUENTA</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="login/home.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-cutlery fa-4x"></i>
+                                            <p>ALIMENTOS Y BEBIDAS</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="services.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-bed fa-4x"></i>
+                                            <p>Servicios</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="evento.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-clock-o fa-4x"></i>
+                                            <p>Eventos</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="promotions.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-bullhorn fa-4x"></i>
+                                            <p>Promociones</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="gallery.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-picture-o fa-4x"></i>
+                                            <p>Galería</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="login/mi-cuenta.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-map-marker fa-4x"></i>
+                                            <p>LUGARES TURISTICOS</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="login/home.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-comments-o fa-4x"></i>
+                                            <p>CHAT</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a target="blank" href="#" class="external phone-call recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-volume-control-phone fa-4x"></i>
+                                            <p>Llamar al Hotel</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <a href="login/home.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-cog fa-4x"></i>
+                                            <p>MANTENIMIENTO</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="login/mi-cuenta.html" class="recuadro button button-fill button-raised" title="">
+                                            <i class="fa fa-question-circle fa-4x"></i>
+                                            <p>AYUDA</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="row copy">
+                                <div class="col-100">
+                                    <hr>
+                                    <center>
+                                        <span class="lenguaje" key="copy-1"> ... </span>
+                                        <span class="lenguaje" key="copy-2"> ...</span>
+                                    </center>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/lib/framework7/js/framework7.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.swipebox.js"></script>
+        <script type="text/javascript" src="assets/js/language_es.js"></script>
+        <script type="text/javascript" src="assets/js/language_en.js"></script>
+        <script type="text/javascript" src="assets/js/language_config.js"></script>
+        <script type="text/javascript" src="assets/js/my-app.js"></script>
+    </body>
+</html>
